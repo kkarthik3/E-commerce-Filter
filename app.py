@@ -136,18 +136,21 @@ if input_query := st.text_input("Enter Query"):
     num_columns = 3
 
     if num_results == 1:
-        st.image(results[0][7], caption=f"Product - {results[0][1]}, Price - {
-                 results[0][2]}, Occasion - {results[0][6]}")
+        st.image(results[0][7], caption=f"Product - {results[0][1]}, Price - {results[0][2]}, Occasion - {results[0][6]}")
     else:
-        num_rows = (num_results + num_columns -
-                    1) // num_columns  # Round up division
+        num_rows = (num_results + num_columns - 1) // num_columns  # Round up division
         for row in range(num_rows):
             cols = st.columns(num_columns)
             for col in range(num_columns):
                 index = row * num_columns + col
                 if index < num_results:
-                    cols[col].image(results[index][7], caption=f"Product - {results[index][1]}, Price - {
-                                    results[index][2]}, Occasion - {results[index][6]}", use_column_width=True, clamp=True)
+                    cols[col].image(
+                        results[index][7],
+                        caption=f"Product - {results[index][1]}, Price - {results[index][2]}, Occasion - {results[index][6]}",
+                        use_column_width=True,
+                        clamp=True
+                )
+
 
     # Display the results
     # st.write("Filtered Results:", results)
