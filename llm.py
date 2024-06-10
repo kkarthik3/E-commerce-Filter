@@ -23,6 +23,7 @@ Rules to be follow:
 only extract as list dont add any other texts or any other
 format in the order of [int(Pricerangemin), int(pricerangemax), producttype, materials,occasions,int(minWeight),int(maxweight)]
 only map to the list acording to input dont map anything else
+Avoid Plurals like rings, necklaces and map according type
 Example:
 
 Example User Utterance: "I'm looking for 10g gold and silver earrings under 10000 for a party."
