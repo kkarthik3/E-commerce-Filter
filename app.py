@@ -131,6 +131,9 @@ if input_query := st.text_input("Enter Query"):
     results = cursor.fetchall()
     # Determine the number of rows needed
 
+    if len(results)==0:
+        st.info("No Results found ☹")
+
     # Display results in a grid layout
     num_results = len(results)
     num_columns = 3
