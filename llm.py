@@ -1,14 +1,14 @@
 import os
 from list import extract_first_list_from_string
-
+from dotenv import load_dotenv
 from groq import Groq
+
+load_dotenv()
 
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
     
 )
-
-
 
 
 Prompt = """Create a list that takes a user utterance as input and extracts the following information in the specified order:
