@@ -10,8 +10,8 @@ conn = sqlite3.connect('ornaments_db.db')
 cursor = conn.cursor()
 
 
-st.set_page_config("PNG Jwellery", layout='wide')
-st.header("PNG jwellery Query extraction")
+st.set_page_config("PNG Jewellery", layout='wide',page_icon="https://d1put4x3vjlh9s.cloudfront.net/public/uploads/website/png_logo_1675677572.svg")
+st.header("PNG jewellery Query extraction")
 # Sidebar filters
 st.sidebar.header("Filter Options")
 
